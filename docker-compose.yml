@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  imap:
+    image: dovecot/dovecot
+    ports:
+      - "50143:143"
+    volumes:
+      - ./etc:/etc/dovecot
+      - ./mail:/srv/mail
